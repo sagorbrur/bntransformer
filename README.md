@@ -1,6 +1,8 @@
 # Bengali Transformer
 Bengali Transformer for natural language processing using state of the art transformer(language model)
 
+Thanks to huggingface [transformers](https://github.com/huggingface/transformers)
+
 ## Installation
 ```
 pip install bntransformer
