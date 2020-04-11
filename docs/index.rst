@@ -44,7 +44,7 @@ Bert Multilingual Tokenizer
      print(tokens)
      # output: ['আ', '##মি', 'ভ', '##াত', 'খা', '##ই', '।']
 
-  Encode Ids from text
+Encode Ids from text
 
 .. code-block:: py
 
@@ -55,7 +55,7 @@ Bert Multilingual Tokenizer
      print(encode_ids)
      # output: [101, 938, 37376, 971, 43004, 80501, 14998, 920, 102]
 
-   Decode Ids from text
+Decode Ids from text
 
 .. code-block:: py
 
