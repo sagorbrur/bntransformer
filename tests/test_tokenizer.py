@@ -1,6 +1,6 @@
 
 import unittest
-from bntransformer.bnbert import Tokenizer
+from ..bntransformer.bnbert import Tokenizer
 
 class TestTokenizer(unittest.TestCase):
     
