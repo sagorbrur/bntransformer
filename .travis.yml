@@ -18,6 +18,6 @@ install:
   - pip install transformers
 
 # Run the unit test
-#script:
- # - python test.py
+script:
+  - python tests/test_tokenizer.py
   # - coverage run tests.py
