@@ -1,6 +1,8 @@
 # Bengali Transformer
 [![Build Status](https://travis-ci.org/sagorbrur/bntransformer.svg?branch=master)](https://travis-ci.org/sagorbrur/bntransformer)
 [![PyPI version](https://img.shields.io/pypi/v/bntransformer)](https://pypi.org/project/bntransformer/)
+[![Documentation Status](https://readthedocs.org/projects/bntransformer/badge/?version=latest)](https://bntransformer.readthedocs.io/en/latest/?badge=latest)
+
 
 Bengali Transformer for natural language processing using state of the art transformer(language model)
 
