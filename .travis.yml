@@ -19,5 +19,5 @@ install:
 
 # Run the unit test
 script:
-  - python tests/test_tokenizer.py
+  - python tests.py
   # - coverage run tests.py
