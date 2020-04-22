@@ -48,5 +48,8 @@ pip install bntransformer
    
    ```
     
+   
+  # Contributing
+  Follow [CONTRIBUTING.md](CONTRIBUTING.md) to get contributing guide.
 
 
