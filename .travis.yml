@@ -9,13 +9,13 @@ os:
   - linux
 # Set the python version to 3.6, 3.7
 python:
-  - "3.5"
   - "3.6"
   - "3.7"
 
 # Install the pip dependency
 install:
   - pip install transformers
+  - pip install sentencepiece
 
 # Run the unit test
 script:
