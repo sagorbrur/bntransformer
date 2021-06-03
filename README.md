@@ -15,6 +15,9 @@ or
 pip install -U bntransformer
 ```
 
+## Dependency
+- **pytorch(1.6+)**
+
 ## Usage
 
 ### Tokenization
