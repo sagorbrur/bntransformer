@@ -1,14 +1,14 @@
 
-from transformers import BertTokenizer
-#import torch
+from transformers import AutoTokenizer
 
-class Tokenizer(object):
-    def __init__(self):
-        self.tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
+class BanglaTokenizer:
+    def __init__(self, model_path=None):
+        if not model_path:
+            model_path = "sagorsarker/bangla-bert-base"
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
     def tokenize(self, text):
         tokens = self.tokenizer.tokenize(text)
-
         return tokens
 
     def encode(self, text):

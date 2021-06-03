@@ -1,12 +1,12 @@
 import unittest
-from bntransformer.bnbert import Tokenizer
+from bntransformer.tokenizer import BanglaTokenizer
 
 class TestTokenizer(unittest.TestCase):
     
     def test_tokenizer(self):
-        tokenizer = Tokenizer()
+        tokenizer = BanglaTokenizer()
         tokens = tokenizer.tokenize('আমি ভাত খাই।')
-        self.assertEqual(tokens, ['আ', '##মি', 'ভ', '##াত', 'খা', '##ই', '।'])    
+        self.assertEqual(tokens, ['আমি', 'বাংলা', '##য', 'গান', 'গাই', '।']) 
 
 if __name__ == '__main__':
     unittest.main()
