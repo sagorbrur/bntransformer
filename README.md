@@ -26,7 +26,8 @@ pip install -U bntransformer
 from bntransformer import BanglaTokenizer
 
 bntokenizer = BanglaTokenizer() 
-# you can custom model path or other bengali huggingface model path
+# you can pass custom model path or other bengali huggingface model path
+# example: BanglaTokenizer("bert-base-multilingual-uncased")
 # default it takes "sagorsarker/bangla-bert-base"
 text = "আমি বাংলায় গান গাই ।"
 tokens = bntokenizer.tokenize(text)
@@ -40,7 +41,7 @@ print(tokens)
 from bntransformer import BanglaQA
 
 bnqa = BanglaQA()
-# you can custom model path or other bengali huggingface model path
+# you can pass custom QA model path or other bengali huggingface QA model path
 # default it takes "sagorsarker/mbert-bengali-tydiqa-qa"
 context = "সূর্য সেন ১৮৯৪ সালের ২২ মার্চ চট্টগ্রামের রাউজান থানার নোয়াপাড়ায় অর্থনৈতিক ভাবে অস্বচ্ছল পরিবারে জন্মগ্রহণ করেন। তাঁর পিতার নাম রাজমনি সেন এবং মাতার নাম শশী বালা সেন। রাজমনি সেনের দুই ছেলে আর চার মেয়ে। সূর্য সেন তাঁদের পরিবারের চতুর্থ সন্তান। দুই ছেলের নাম সূর্য ও কমল। চার মেয়ের নাম বরদাসুন্দরী, সাবিত্রী, ভানুমতী ও প্রমিলা। শৈশবে পিতা মাতাকে হারানো সূর্য সেন কাকা গৌরমনি সেনের কাছে মানুষ হয়েছেন। সূর্য সেন ছেলেবেলা থেকেই খুব মনোযোগী ভাল ছাত্র ছিলেন এবং ধর্মভাবাপন্ন গম্ভীর প্রকৃতির ছিলেন।"
 question = "মাস্টারদা সূর্যকুমার সেনের বাবার নাম কী ছিল ?"
@@ -56,7 +57,7 @@ print(answers)
 from bntransformer import BanglaNER
 
 bnner = BanglaNER()
-# you can custom model path or other bengali huggingface model path
+# you can pass custom NER model path or other bengali huggingface NER model path
 # default it takes "neuropark/sahajBERT-NER"
 sentence = "আমি জাহিদ হাসান এবং আমি ঢাকায় বাস করি ।"
 output = bnner.ner_tag(sentence)
@@ -69,7 +70,7 @@ print(output)
 from bntransformer import BanglaMaskGeneration
 
 bnunmasker = BanglaMaskGeneration()
-# you can custom model path or other bengali huggingface model path
+# you can pass custom mask generation model path or other bengali huggingface model path
 # default it takes "sagorsarker/bangla-bert-base"
 sentence = "আমি জাহিদ হাসান এবং আমি [MASK] বাস করি । "
 output = bnunmasker.generate_mask(sentence)
@@ -81,7 +82,7 @@ print(output)
 from bntransformer import BanglaTranslation
 
 bntrans = BanglaTranslation()
-# you can custom model path or other bengali huggingface model path
+# you can pass custom translation model path or other bengali huggingface translation model path
 # default it takes "Helsinki-NLP/opus-mt-bn-en"
 bn_sentence = "আমার নাম জাহিদ, আমি ঢাকায় বাস করি।"
 output = bntrans.bn2en(bn_sentence)
@@ -90,4 +91,11 @@ print(output)
 
 ```
 
+## Model Used For Instant Inference
+- [Question Answering](https://huggingface.co/sagorsarker/mbert-bengali-tydiqa-qa)
+- [Name Entity Recognition](https://huggingface.co/neuropark/sahajBERT-NER)
+- [Mask Generation](https://huggingface.co/sagorsarker/bangla-bert-base)
+- [Translation](https://huggingface.co/Helsinki-NLP/opus-mt-bn-en)
+
+NB: Or you can use custom model local model path or other huggingface model path while calling the base class
 
