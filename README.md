@@ -33,6 +33,10 @@ text = "আমি বাংলায় গান গাই ।"
 tokens = bntokenizer.tokenize(text)
 print(tokens)
 # outputs: ['আমি', 'বাংলা', '##য', 'গান', 'গাই', '।']
+encode_ids = bntokenizer.encode(text)
+print(encode_ids)
+decode_text = bntokenizer.decode(encode_ids)
+print(decode_text)
 
 ```
 

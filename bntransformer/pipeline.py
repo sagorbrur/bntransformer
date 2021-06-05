@@ -53,17 +53,18 @@ class BanglaNER:
                 updated_ner_results.append(updated_ner_result)
         return updated_ner_results
     
-    def ner_tag(self, sentence, data_type="wikiann"):
+    def ner_tag(self, sentence):
         ner_results = self.nlp(sentence)
-        if data_type=="wikiann":
+        try:
+            # for "neuropark/sahajBERT-NER" only
             entity_maps = copy.deepcopy(entity_map)
             updated_ner_results = self.get_updated_ner_results(
                 ner_results,
                 entity_maps
             )
             return updated_ner_results
-
-        return ner_results
+        except:
+            return ner_results
 
 class BanglaMaskGeneration:
     def __init__(self, model_path=None):
