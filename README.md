@@ -107,6 +107,3 @@ print(output)
 - [Name Entity Recognition](https://huggingface.co/neuropark/sahajBERT-NER)
 - [Mask Generation](https://huggingface.co/sagorsarker/bangla-bert-base)
 - [Translation](https://huggingface.co/Helsinki-NLP/opus-mt-bn-en)
-
-NB: Or you can use custom model local model path or other huggingface model path while calling the base class
-
