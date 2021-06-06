@@ -92,5 +92,6 @@ class BanglaTranslation:
         final_outputs = self.tokenizer.decode(outputs[0])
         if '<pad>' in final_outputs:
           final_outputs = final_outputs.replace('<pad>', '')
+          final_outputs = final_outputs.strip()
         return final_outputs
         
