@@ -1,4 +1,4 @@
-# BNTRANSFORMER
+# bntransformer
 [![Build Status](https://travis-ci.org/sagorbrur/bntransformer.svg?branch=master)](https://travis-ci.org/sagorbrur/bntransformer)
 [![PyPI version](https://img.shields.io/pypi/v/bntransformer)](https://pypi.org/project/bntransformer/)
 
@@ -19,6 +19,13 @@ pip install -U bntransformer
 - **pytorch(1.6+)**
 
 ## Usage
+### Usage Notes
+- All below task are using default model for Bengali tokenization, question answering, name entity recognition, translation. You can find default model link [here](#Default-Inference-Models). 
+
+- You can pass your own trained **local transformers model** or **huggingface model hub model**. All you need to pass that model while calling the base class.
+
+- **Example:** while calling `BanglaQA` class you can simple use default model for inference as `bnqa = BanglaQA()` or you can pass another model like `bnqa = BanglaQA("another_model")`
+- You can find an example colab notebook under [examples](examples/)
 
 ### Tokenization
 
@@ -27,7 +34,7 @@ from bntransformer import BanglaTokenizer
 
 bntokenizer = BanglaTokenizer() 
 # you can pass custom model path or other bengali huggingface model path
-# example: BanglaTokenizer("bert-base-multilingual-uncased")
+# example: bntokenizer = BanglaTokenizer("bert-base-multilingual-uncased")
 # default it takes "sagorsarker/bangla-bert-base"
 text = "আমি বাংলায় গান গাই ।"
 tokens = bntokenizer.tokenize(text)
@@ -95,7 +102,7 @@ print(output)
 
 ```
 
-## Model Used For Instant Inference
+## Default Inference Models
 - [Question Answering](https://huggingface.co/sagorsarker/mbert-bengali-tydiqa-qa)
 - [Name Entity Recognition](https://huggingface.co/neuropark/sahajBERT-NER)
 - [Mask Generation](https://huggingface.co/sagorsarker/bangla-bert-base)
