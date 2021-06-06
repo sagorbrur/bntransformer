@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="bntransformer",
-    version="2.1.0",
+    version="2.0.1",
     author="Sagor Sarker",
     author_email="sagorhem3532@gmail.com",
     description="bengali transformer bengali language processing state of the art transformer",
