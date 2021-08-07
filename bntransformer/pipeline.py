@@ -95,3 +95,18 @@ class BanglaTranslation:
           final_outputs = final_outputs.strip()
         return final_outputs
         
+class BanglaTextGeneration:
+    def __init__(self, model_path=None, max_length=50, do_sample=False):
+        if not model_path:
+            model_path = "flax-community/gpt2-bengali"
+        self.text_generator = pipeline('text-generation',model=model_path, tokenizer=model_path)
+        self.max_length = max_length
+        self.do_sample = do_sample
+    
+    def generate_text(self, input_text):
+        try:
+            results = self.text_generator(input_text, max_length=self.max_length, do_sample=self.do_sample)
+            return results
+        except Exception as e:
+            print(e)
+            return None
