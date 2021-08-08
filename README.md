@@ -24,7 +24,7 @@ pip install -U bntransformer
 
 - You can pass your own trained **local transformers model** or **huggingface model hub model**. All you need to pass that model while calling the base class.
 
-- **Example:** while calling `BanglaQA` class you can simple use default model for inference as `bnqa = BanglaQA()` or you can pass another model like `bnqa = BanglaQA("another_model")`
+- **Example:** while calling `BanglaQA` class you can use default model for inference as `bnqa = BanglaQA()` or you can pass another model like `bnqa = BanglaQA("another_model")`
 - You can find an example colab notebook under [examples](examples/)
 
 ### Tokenization
@@ -122,4 +122,3 @@ print(output)
 - [Text Generation](https://huggingface.co/flax-community/gpt2-bengali)
 
 NB: Or you can use custom model local model path or other huggingface model path while calling the base class
-
