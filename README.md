@@ -20,7 +20,7 @@ pip install -U bntransformer
 
 ## Usage
 ### Usage Notes
-- All below task are using default model for Bengali tokenization, question answering, name entity recognition, translation. You can find default model link [here](#Default-Inference-Models). 
+- All below task are using default model for Bengali tokenization, question answering, name entity recognition, translation, text generation. You can find default model link [here](#Default-Inference-Models). 
 
 - You can pass your own trained **local transformers model** or **huggingface model hub model**. All you need to pass that model while calling the base class.
 
@@ -102,8 +102,23 @@ print(output)
 
 ```
 
+### Bangla Text Generation
+```py
+from bntransformer import BanglaTextGeneration
+
+bntrans = BanglaTextGeneration()
+# you can pass custom text generation model path or other bengali huggingface Bengali text gen model path
+# default it takes "flax-community/gpt2-bengali"
+input_text = "আমি রতন এবং আমি"
+output = bntrans.generate_text(input_text)
+print(output)
+```
+
 ## Default Inference Models
 - [Question Answering](https://huggingface.co/sagorsarker/mbert-bengali-tydiqa-qa)
 - [Name Entity Recognition](https://huggingface.co/neuropark/sahajBERT-NER)
 - [Mask Generation](https://huggingface.co/sagorsarker/bangla-bert-base)
 - [Translation](https://huggingface.co/Helsinki-NLP/opus-mt-bn-en)
+- [Text Generation](https://huggingface.co/flax-community/gpt2-bengali)
+
+NB: Or you can use custom model local model path or other huggingface model path while calling the base class
