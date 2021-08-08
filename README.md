@@ -20,7 +20,7 @@ pip install -U bntransformer
 
 ## Usage
 ### Usage Notes
-- All below task are using default model for Bengali tokenization, question answering, name entity recognition, translation. You can find default model link [here](#Default-Inference-Models). 
+- All below task are using default model for Bengali tokenization, question answering, name entity recognition, translation, text generation. You can find default model link [here](#Default-Inference-Models). 
 
 - You can pass your own trained **local transformers model** or **huggingface model hub model**. All you need to pass that model while calling the base class.
 
