@@ -107,7 +107,7 @@ print(output)
 from bntransformer import BanglaTextGeneration
 
 bntrans = BanglaTextGeneration()
-# you can pass custom translation model path or other bengali huggingface Bengali text gen model path
+# you can pass custom text generation model path or other bengali huggingface Bengali text gen model path
 # default it takes "flax-community/gpt2-bengali"
 input_text = "আমি রতন এবং আমি"
 output = bntrans.generate_text(input_text)
