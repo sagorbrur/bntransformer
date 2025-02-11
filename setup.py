@@ -20,7 +20,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        "transformers==4.38.0",
+        "transformers==4.48.0",
         "sentencepiece",
     ],
 )
